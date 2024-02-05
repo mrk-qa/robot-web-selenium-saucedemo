@@ -1,6 +1,6 @@
 # Robot Framework com Selenium - Sauce Demo 🚀
 
-<h1 align="left">
+<h1 align="center">
     <img width="300px" src="https://saucelabs.com/images/logo.svg" alt="sauce_demo">
 </h1>
 
