@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                          Steps da tela de login
 
-Resource                               ../pages/login_page.resource
+Resource                               ${CURDIR}/../pages/login_page.resource
 
 *** Keywords ***
 Dado que acesso o website

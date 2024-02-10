@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation                          [WEB] Testes relacionados a compra de produtos
 
-Resource                               ../steps/login_steps.resource
-Resource                               ../steps/products_steps.resource
-Resource                               ../steps/cart_steps.resource
-Resource                               ../steps/checkout_info_steps.resource
-Resource                               ../steps/checkout_overview_steps.resource
-Resource                               ../steps/checkout_complete_steps.resource
-Resource                               ../setup.resource
+Resource                               ${CURDIR}/../steps/login_steps.resource
+Resource                               ${CURDIR}/../steps/products_steps.resource
+Resource                               ${CURDIR}/../steps/cart_steps.resource
+Resource                               ${CURDIR}/../steps/checkout_info_steps.resource
+Resource                               ${CURDIR}/../steps/checkout_overview_steps.resource
+Resource                               ${CURDIR}/../steps/checkout_complete_steps.resource
+Resource                               ${CURDIR}/../setup.resource
 
 Test Setup                             Nova Sessão
 Test Teardown                          Encerra Sessão

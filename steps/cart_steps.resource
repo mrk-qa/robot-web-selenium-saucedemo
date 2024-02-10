@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                          Steps da tela de carrinho
 
-Resource                               ../pages/cart_page.resource
+Resource                               ${CURDIR}/../pages/cart_page.resource
 
 *** Keywords ***
 E verifico o carrinho

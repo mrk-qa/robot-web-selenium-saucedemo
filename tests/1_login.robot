@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation                          [WEB] Testes relacionados ao login
 
-Resource                               ../steps/login_steps.resource
-Resource                               ../steps/products_steps.resource
-Resource                               ../setup.resource
+Resource                               ${CURDIR}/../steps/login_steps.resource
+Resource                               ${CURDIR}/../steps/products_steps.resource
+Resource                               ${CURDIR}/../setup.resource
 
 Test Setup                             Nova Sessão
 Test Teardown                          Encerra Sessão
