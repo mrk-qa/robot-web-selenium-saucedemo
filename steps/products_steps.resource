@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                          Steps da tela home
 
-Resource                               ${CURDIR}/../pages/produts_page.resource
+Resource                               ../pages/produts_page.resource
 
 *** Keywords ***
 Então devo visualizar a página de Produtos
