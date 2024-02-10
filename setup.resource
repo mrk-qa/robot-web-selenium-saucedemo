@@ -9,7 +9,7 @@ ${CHROME_OPTIONS}                      add_experimental_option('excludeSwitches'
 *** Keywords ***
 Nova Sessão
     #chrome or headlesschrome
-    Open Browser                       https://www.saucedemo.com         chrome          options=${CHROME_OPTIONS}
+    Open Browser                       https://www.saucedemo.com         chrome        options=${CHROME_OPTIONS}        executable_path="/usr/local/bin"
     Maximize Browser Window
 
 Encerra Sessão
