@@ -12,4 +12,7 @@ jobs:
         with:
           python-version: '3.9'
       - run: pip install -r requirements.txt
+      - uses: nanasess/setup-chromedriver@v2
+        with:
+          chromedriver-version: '121.0.6167.85'
       - run: robot -d reports/ tests/*.robot
