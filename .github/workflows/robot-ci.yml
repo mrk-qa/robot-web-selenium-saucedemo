@@ -1,18 +1,24 @@
-name: Running Terratest and Deploy Report Github Pages
+name: Robot Framework CI
 
 on: push
 
 jobs:
-  run_test:
+  test:
     runs-on: ubuntu-latest
     name: Setup Python and Run Tests
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      - name: Execute tests
+        uses: joonvena/robotframework-docker-action@v0.1
+        env:
+          BROWSER: chrome
+          ROBOT_TESTS_DIR: ${{ github.workspace }}/tests
+          ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
         with:
-          python-version: '3.9'
-      - run: pip install -r requirements.txt
-      - uses: nanasess/setup-chromedriver@v2
-        with:
-          chromedriver-version: '121.0.6167.85'
-      - run: robot -d reports/ tests/*.robot
+          name: reports
+          path: ${{ github.workspace }}/reports
