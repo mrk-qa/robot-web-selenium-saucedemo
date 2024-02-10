@@ -5,7 +5,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: run tests
+    name: test
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
         with:
           chromedriver-version: '121.0.6167.85'
 
-      - name: Running Robot
+      - name: Running tests
         run: robot -d reports/ -r index.html tests/*.robot
 
       - name: Upload artifact
